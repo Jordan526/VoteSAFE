@@ -1,0 +1,59 @@
+<!-- Usual header stuff -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteSAFE</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="istockphoto-897303186-612x612.jpg">
+</head>
+<body>
+    <nav> 
+        <!-- NavBAr-->
+        <div class="logo">
+            <a href="/"><img class="logo2" src="votesafe-logo2-03.webp" alt="VoteSAFE Logo"></a>
+        </div>
+        <div class="nav-items">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+  <hr>
+
+<section class="hero">
+    <div class="hero-container">
+        <div class="column-left">
+            <!-- VoteSAFE Message for Dedication -->
+            <h1>Submit Your Vote Safe, Smart, and Securely!</h1>
+            <p>We are dedicated to ensuring your vote cast is submitted securely.</p>
+            <!-- Submit Vote Button-->
+            <a href="vote.html">
+                <button>Submit Your Vote</button>
+            </a>
+            
+        </div>
+        <div class="column-right">
+            <!-- Logo -->
+            <img src="logo.png" alt="votesafe's logo mission" class="hero-image">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <!-- Copyright -->
+    <p>&copy; 2025 VoteSAFE. All rights reserved.</p>
+</footer>
+<!-- Ensuring messsage-sent.html gets executed -->
+<script>
+    
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        window.location.href = "message-sent.html"; // Redirect to message-sent.html
+    });
+</script>
+</body>
+</html>

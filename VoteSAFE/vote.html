@@ -1,0 +1,64 @@
+<!-- Usual header stuff -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Vote - VoteSAFE</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/icon.jpeg" href="istockphoto-897303186-612x612.jpg">
+</head>
+<body>
+    <nav>
+        <!-- NavBar -->
+        <div class="logo">
+            <a href="index.html"><img class="logo2" src="votesafe-logo2-03.webp" alt="VoteSAFE Logo"></a>
+        </div>
+        <div class="nav-items">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <hr>
+
+    <section class="vote-container">
+        <div class="vote-content">
+            <!-- Submitting vote form -->
+            <h1>Submit Your Vote</h1>
+            <p>Fill out the form below to cast your vote securely.</p>
+
+            <form id="vote-form" action="connect.php" method="POST">
+                <label for="candidate">Choose a Candidate:</label>
+                <select id="candidate" name="candidate" required>
+                    <option value="">Please Select a Candidate & Running Mate</option>
+                    <option value="Donald Trump/J.D. Vance">Donald Trump/J.D. Vance (R)</option>
+                    <option value="Kamala D. Harris/Tim Walz">Kamala D. Harris/Tim Walz (D)</option>
+                    <option value="Jill Stein">Jill Stein (G)</option>
+                    <option value="Robert F. Kennedy/Nicole Shanahan">Robert F. Kennedy/Nicole Shanahan (Independent)</option>
+                </select>
+                
+                <!-- Button to submit vote-->
+                <button type="submit">Submit Vote</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Copyright -->
+        <p>&copy; 2025 VoteSAFE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Ensure vote-confirmation.html gets executed -->
+    <script>
+        document.getElementById("vote-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Redirect to the message-sent page
+            window.location.href = "vote-confirmation.html"; // Redirect to confirmation page after vote submission
+        });
+    </script>
+</body>
+</html>
